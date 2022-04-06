@@ -15,11 +15,14 @@ public class Ticket {
     @Column(name = "email", nullable = false)
     private String email;
 
+    @Column(name = "subject",nullable = false)
+    private String subject;
+
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "is_open", nullable = false)
-    private boolean isOpen;
+    @Column(name = "status", nullable = false)
+    private TicketStatus status;
 
     @ManyToMany
     @JsonIgnore
